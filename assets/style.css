@@ -1,5 +1,6 @@
 :root {
   --background: rgba(108, 108, 108, 0.85);
+  --grey-blue:#a7cde2;
 }
 
 *, *::before, *::after {
@@ -8,41 +9,54 @@
 
 body {
 	margin: 0;
-	background: #a7cde2;
+	background: var(--grey-blue);
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	font-weight: 400;
 }
 
 .content {
-  height: 300px;
-  background-color: #a7cde2;
+height: 233px;
+background: var(--grey-blue);
+position: relative;
+display: flex;
+margin-top: 28px;
+}
+
+h1 {
+  text-align: center;
+  position: relative;
+}
+
+.paragraph {
+  height: 30px;
+  background: var(--grey-blue);
   background-size: cover;
-  display: grid;
   place-items: center;
-  margin-left: 30px;
+  margin-left: 24px;
+  margin-top: 0px; 
+ border-left: #000 2px solid;
+  padding-left: 20px;
 }
  
 .applications {
-    background-color: #a7cde2;
-    background-blend-mode: multiply;
-    background-size: cover;
-    margin-bottom: 30px;
+    background: var(--grey-blue);
     margin-left: 30px;
-    color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-/* navigation styles start here */
+
+.applications figure li {
+margin: 31px;
+}
 
 header {
   background: var(--background);
-  text-align: center;
-  position: fixed;
+  position: fixed top;
   z-index: 999;
   width: 100%;
+  font-size: 150%;
+  display: flex;
 }
 
-/* changed this from the tutorial video to
-   allow it to gain focus, making it tabbable */
 .nav-toggle {
   position: absolute !important;
   top: -9999px !important;
@@ -67,7 +81,7 @@ header {
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
   display: block;
-  background: #abcef0;
+  background: var(--grey-blue);
   height: 2px;
   width: 2em;
   border-radius: 2px;
@@ -133,68 +147,78 @@ nav a:hover {
   transition: opacity 250ms ease-in-out 250ms;
 }
 
-@media screen and (min-width: 800px) {
-  .nav-toggle-label {
-    display: none;
-  }
-
-  header {
-    display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
-  }
-  
-  .logo {
-    grid-column: 2 / 3;
-  }
-  
-  nav {
-    // all: unset; /* this causes issues with Edge, since it's unsupported */
-    
-    /* the following lines are not from my video, but add Edge support */
-    position: relative;
-    text-align: left;
-    transition: none;
-    transform: scale(1,1);
-    background: none;
-    top: initial;
-    left: initial;
-    /* end Edge support stuff */
-    
-    grid-column: 3 / 4;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  
-  nav ul {
-    display: flex;
-  }
-  
-  nav li {
-    margin-left: 3em;
-    margin-bottom: 0;
-  }
-  
-  nav a {
-    opacity: 1;
-    position: relative;
-  }
-  
-  nav a::before {
-    content: '';
-    display: block;
-    height: 5px;
-    background: #abcef0;
-    position: absolute;
-    top: -.75em;
-    left: 0;
-    right: 0;
-    transform: scale(0, 1);
-    transition: transform ease-in-out 250ms;
-  }
-  
-  nav a:hover::before {
-    transform: scale(1,1);
-  }
+nav {
+  position: relative;
+  text-align: left;
+  transition: none;
+  transform: scale(1,1);
+  background: none;
+  top: initial;
+  left: initial;
+  grid-column: 3 / 4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
+nav ul {
+  display: flex;
+}
+
+nav li {
+  margin-left: 3em;
+  margin-bottom: 0;
+}
+
+nav a {
+  opacity: 1;
+  position: relative;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background: var(--grey-blue);
+  position: absolute;
+  top: -.75em;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
+  transition: transform ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  transform: scale(1,1);
+}
+
+.logo {
+  grid-column: 2 / 3;
+}
+
+.button {
+  text-decoration: none;
+  color: white;
+  border: white;
+  border-width: 2px;
+  border-style: solid;
+  margin: 12px;
+  padding: 9px;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+ figure {
+  position: relative;
+  width: 400px;
+  margin: 20px;
+ }
+
+ figure a {
+position: absolute;
+top: 0px;
+right: 0;
+ }
+
+ figure img {
+  width: 400px;
+ }
