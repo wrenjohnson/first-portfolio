@@ -19,23 +19,30 @@ height: 233px;
 background: var(--grey-blue);
 position: relative;
 display: flex;
-margin-top: 28px;
+top: 107px;
 }
 
 h1 {
   text-align: center;
   position: relative;
+  top: 17px;
+}
+
+h2 {
+  text-align: center;
+  position: relative;
+  top: 34px;
 }
 
 .paragraph {
-  height: 30px;
   background: var(--grey-blue);
   background-size: cover;
   place-items: center;
   margin-left: 24px;
   margin-top: 0px; 
- border-left: #000 2px solid;
+  border-left: #000 2px solid;
   padding-left: 20px;
+  height: fit-content;
 }
  
 .applications {
@@ -49,61 +56,19 @@ margin: 31px;
 }
 
 header {
-  background: var(--background);
-  position: fixed top;
-  z-index: 999;
-  width: 100%;
-  font-size: 150%;
-  display: flex;
-}
-
-.nav-toggle {
-  position: absolute !important;
-  top: -9999px !important;
-  left: -9999px !important;
-}
-
-.nav-toggle:focus ~ .nav-toggle-label {
-  outline: 3px solid rgba(lightblue, .75);
-}
-
-.nav-toggle-label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-left: 1em;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  display: block;
-  background: var(--grey-blue);
-  height: 2px;
-  width: 2em;
-  border-radius: 2px;
-  position: relative;
-}
-
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  content: '';
-  position: absolute;
-}
-
-.nav-toggle-label span::before {
-  bottom: 7px;
-}
-
-.nav-toggle-label span::after {
-  top: 7px;
+background: var(--background);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    font-size: 150%;
+    display: flex;
+    height: 60px;
 }
 
 nav {
-  position: absolute;
+  position: fixed;
+  top: 0;
   text-align: left;
   top: 100%;
   left: 0;
