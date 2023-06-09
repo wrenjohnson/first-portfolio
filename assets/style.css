@@ -175,7 +175,8 @@ nav a:hover::before {
  figure {
   position: relative;
   width: 400px;
-  margin: 130px;
+  margin-left: 20px;
+  margin-top: 120px;
  }
 
  figure a {
